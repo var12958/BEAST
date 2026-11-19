@@ -1,0 +1,268 @@
+/* BEAST — terminal interface styles.
+   Palette lives in beast/ui/branding.py and is mirrored here because Textual
+   stylesheets cannot import Python constants. */
+
+Screen {
+    background: #0b0e14;
+    color: #d7dbe3;
+}
+
+/* ---------------------------------------------------------------- header --- */
+
+BrandHeader {
+    height: auto;
+    padding: 1 2 0 2;
+    background: #0e1219;
+}
+
+#brand-row {
+    height: auto;
+}
+
+#brand-logo {
+    width: 21;
+    height: 3;
+    padding: 0 1 0 0;
+    content-align: left top;
+}
+
+#brand-info {
+    width: 1fr;
+    height: auto;
+}
+
+#brand-title,
+#brand-meta,
+#brand-workspace {
+    height: 1;
+}
+
+/* ---------------------------------------------------------- conversation --- */
+
+#conversation {
+    height: 1fr;
+    padding: 0 2;
+    scrollbar-size-vertical: 1;
+    scrollbar-background: #0b0e14;
+    scrollbar-color: #2a3140;
+    scrollbar-color-hover: #3a4356;
+    scrollbar-color-active: #f0a44a;
+}
+
+Splash {
+    height: auto;
+    padding: 1 0 0 0;
+}
+
+.message {
+    height: auto;
+    padding: 1 0 0 0;
+}
+
+.message-label {
+    height: 1;
+}
+
+.message-body {
+    height: auto;
+}
+
+.user-message .message-body {
+    padding: 0 0 0 1;
+}
+
+.assistant-message Markdown {
+    margin: 0;
+    padding: 0 0 0 1;
+    background: transparent;
+}
+
+.assistant-message Markdown:focus {
+    background: transparent;
+}
+
+.message-footer {
+    height: auto;
+    padding: 0 0 0 1;
+}
+
+.system-notice {
+    height: auto;
+    padding: 1 0;
+}
+
+.analysis-activity {
+    height: auto;
+    padding: 0 0 0 1;
+    text-wrap: nowrap;
+    text-overflow: ellipsis;
+}
+
+.tool-activity {
+    height: auto;
+    padding: 0 0 0 1;
+    text-wrap: nowrap;
+    text-overflow: ellipsis;
+}
+
+/* ------------------------------------------------------- autonomous mode --- */
+
+.task-board {
+    height: auto;
+    max-height: 12;
+    padding: 0 2;
+    background: #0e1219;
+    border-top: solid #1b2230;
+    color: #d7dbe3;
+    text-wrap: nowrap;
+    text-overflow: ellipsis;
+}
+
+.run-activity {
+    height: auto;
+    padding: 0 0 0 1;
+    text-wrap: nowrap;
+    text-overflow: ellipsis;
+}
+
+.run-summary {
+    height: auto;
+    padding: 1 1;
+    margin: 1 0;
+    border: round #2a3140;
+    background: #11151d;
+    color: #d7dbe3;
+}
+
+.command-output {
+    height: auto;
+    max-height: 24;
+    overflow-y: auto;
+    padding: 1 0 0 1;
+    color: #d7dbe3;
+}
+
+/* -------------------------------------------------------------- approval --- */
+
+ApprovalScreen {
+    align: center middle;
+    background: #0b0e14 70%;
+}
+
+#approval-panel {
+    width: 84;
+    max-width: 90%;
+    height: auto;
+    padding: 1 2;
+    border: round #f0a44a;
+    background: #11151d;
+}
+
+#approval-heading,
+#approval-target,
+#approval-action,
+#approval-detail,
+#approval-keys {
+    height: auto;
+    padding: 0 0 1 0;
+}
+
+#approval-target {
+    padding: 0 0 0 1;
+}
+
+#approval-detail {
+    max-height: 10;
+    overflow-y: auto;
+}
+
+#approval-buttons {
+    height: auto;
+    padding: 1 0 0 0;
+}
+
+#approval-buttons Button {
+    margin: 0 2 0 0;
+    min-width: 12;
+}
+
+#approval-keys {
+    padding: 1 0 0 0;
+}
+
+/* -------------------------------------------------------------- composer --- */
+
+#composer {
+    height: auto;
+    padding: 0 2 1 2;
+}
+
+PromptArea {
+    height: 6;
+    padding: 0 1;
+    border: round #262d3b;
+    background: #11151d;
+    color: #d7dbe3;
+}
+
+PromptArea:focus {
+    border: round #f0a44a;
+}
+
+#statusbar {
+    height: 1;
+    padding: 0 2;
+    background: #0e1219;
+    color: #7d8799;
+    text-wrap: nowrap;
+    text-overflow: ellipsis;
+}
+
+/* ---------------------------------------------------- model selection --- */
+
+ModelSelectScreen {
+    layout: vertical;
+    padding: 1 2;
+}
+
+#select-logo {
+    height: auto;
+}
+
+#select-title {
+    height: 1;
+    padding: 1 0 0 0;
+}
+
+#select-meta {
+    height: 1;
+}
+
+#models {
+    height: 1fr;
+    margin: 1 0 0 0;
+    padding: 0;
+    border: none;
+    background: #0b0e14;
+}
+
+#models > .option-list--option {
+    padding: 0 1;
+}
+
+#models > .option-list--option-highlighted {
+    background: #1c2331;
+}
+
+#models:focus > .option-list--option-highlighted {
+    background: #263043;
+}
+
+#select-note {
+    height: auto;
+    padding: 1 0 0 0;
+}
+
+#select-keys {
+    height: 1;
+}
